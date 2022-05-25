@@ -1,0 +1,9 @@
+<h1>
+  <span data-bind="data.temperature | append ' ˚C'" /><span
+    data-showif="data.humidity"
+    data-bind="' | ' | append data.humidity | append ' %'"
+  />
+</h1>
+<div>
+  <span data-bind="data.name" />
+</div>
