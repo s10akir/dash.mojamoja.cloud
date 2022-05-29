@@ -1,9 +1,13 @@
 <h1>
-  <span data-bind="data.temperature | append ' ˚C'" /><span
-    data-showif="data.humidity"
-    data-bind="' | ' | append data.humidity | append ' %'"
-  />
+  <i class="fa fa-temperature-high" />
+  <span data-bind="data.temperature | append ' ˚C'" />
+  <span data-showif="data.humidity">
+    <span>|</span>
+    <i class="fa fa-water" />
+    <span data-bind="data.humidity | append ' %'" />
+  </span>
 </h1>
+
 <div>
   <span data-bind="data.name" />
 </div>

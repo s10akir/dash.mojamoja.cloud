@@ -1,8 +1,11 @@
 <h1>
   <span data-bind="data.telop" />
 </h1>
-<h1>
-  <span data-showif="data.temperature.min.celsius" data-bind="data.temperature.min.celsius | append ' ˚C'" /><span data-showif="data.temperature.max.celsius" data-bind="' / ' | append data.temperature.max.celsius | append ' ˚C'" />
+<h1 data-showif="data.temperature.min.celsius">
+  <i class="fa fa-temperature-high" />
+  <span data-bind="data.temperature.min.celsius | append ' ˚C'" /><span
+    data-bind="' / ' | append data.temperature.max.celsius | append ' ˚C'"
+  />
 </h1>
 <div>
   <span data-bind="data.date" />
